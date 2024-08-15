@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>build accessibility Quiz form</title>
+</head>
+<style>
+    img{
+        width:4rem;
+        background-color: #0a0a23;
+     aspect-ratio: 35/4;
+        padding: 0.4em;
+        height: 40px;
+    }
+    header{
+        width: 100%;
+        height: 50px;
+        background-color: #1b1b32;
+        display: flex;
+        position: fixed;
+        top: 0;
+        justify-content: space-between;
+        align-items: center;
+      
+    }
+    h1{
+    color: #f1be32;
+    text-align: center;
+    font-size: min(5vw,1.2em);
+    }
+    nav{
+    width: 50%;
+    height: 50px;
+    max-width: 300px;
+    }
+    nav > ul > li {
+        color: #dfdfe2;
+        margin: 0 0.2rem;
+        padding: 0.2em;
+        display: block;
+    }
+    nav ul li :hover{
+        background-color: #dfdfe2;
+        color: #0a0a23;
+        cursor: pointer;
+    }
+    ul a{
+    color: inherit;
+    text-decoration: none;
+}
+   
+       nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-inline-start: 0%;
+        margin-block: 0;
+
+    }
+    h1,h2{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h2{
+        border-bottom: 4px solid #dfdfe2;
+        margin-top: 0px;
+        padding-top: 60px;
+     
+    }
+    section{
+        width: 80%;
+        margin: 0 auto 10px auto;
+    }
+    main{
+        padding-top: 50px;
+    }
+    .formrows{
+        margin-top: 30px;
+        padding: 0px 15px;
+    }
+    button{
+        display: block;
+        width: 40%;
+        margin: 40px auto;
+        padding: 15px;
+        font-size: 23px;
+        background-color: #d0d0d5;
+        border: 3px solid #3b3b4f;
+    }
+    .info{
+        font-size: 16px;
+    }
+    .info label, .info input{
+        display: inline-block;
+    }
+    .info input{
+        width: 50%;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+    .info label{
+        width: 10%;
+        min-width: 55px;
+        text-align: right;
+    }
+    .question-block{
+        text-align: left;
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        padding-top: 50px;
+    }
+    .question{
+        border: none;
+        padding-bottom: 0%;
+    }
+.answers-list{
+    list-style: none;
+    padding: 0%;
+}
+footer{
+    background-color: #2a2a40;
+    display: flex;
+    justify-content: center;
+}
+address{
+    text-align: center;
+    padding: 0.3em;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  border: 0;
+}
+
+</style>
+<body>
+    <header>
+        <img src="zitnet.jpg" alt="ZitnetACadademy" id="logo">
+        <h1>HTML/CSS QUIZ</h1>
+       <nav>
+        <ul>
+            <li><a href="#student-info">INFO</a></li>
+            <li><a href="#html-questions">HTML</a></li>
+            <li><a href="#css-questions">CSS</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="https://fantsuamfoundation.org" method="get">
+            <section  role="region" aria-labelledby="student-info">
+                <h2 id="student-info">student Info</h2>
+                <div class="info">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="info">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="info">
+                    <label for="dob">D.O.B<span class="sr-only">(Date of birth)</span></label>
+                    <input type="date" id="dob">
+                </div>
+            </section>
+            <section  role="region" aria-labelledby="html-questions">
+<h2 id="html-questions">HTML QUESTION</h2>
+<div class="question-block">
+    <h3>1</h3>
+    <fieldset class="question">
+        <legend>Legend are element use to caption the content of a parent element call fieldset</legend>
+        <ul>
+            <li class="answers-list">
+                <label for="true"><input type="radio" name="answers-list" id="true" value="True">True</label>
+            </li>
+            <li class="answers-list">
+                <label for="false"><input type="radio" id="false" name="answers-list" value="False">False</label>
+            </li>
+        </ul>
+    </fieldset>
+    <h3>2</h3>
+    <fieldset class="question">
+        <legend>if a label is in nesting an input element the label most be given a for atribute which match  the id of the input element</legend>
+        <ul>
+            <li class="answers-list">
+                <label for="true"><input type="radio" name="answers-list" id="true" value="True">True</label>
+            </li>
+            <li class="answers-list">
+                <label for="false"><input type="radio" id="false" name="answers-list" value="False">False</label>
+            </li>
+        </ul>
+    </fieldset>
+</div>
+<div class="question-block"></div>
+            </section>
+            <section  role="region"  aria-labelledby="css-questions">
+                <h2 id="css-questions">CSS QUESTION</h2>
+                <div class="formrows">
+                    <div class="question-block">
+                        <label for="selector">Can the css margin  property accept nagative value</label>
+                    </div>
+                    <div class="answer">
+                        <select name="" id="selector" required>
+                            <option value="">--seclect--</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="question-block">
+                        <label for="css-textarea">Do you hava any question</label>
+                    </div>
+               
+                <div class="answer">
+                    <textarea name="css-textarea" id="css-question" rows="5" cols="25" placeholder="who is flexbox"></textarea>
+                </div>
+            </div>
+            </section>
+            <button type="submit" value="send">send</button>
+        </form>
+    </main>
+    <footer>
+        <address>
+            <a href="https://testgituhnath.github.io/zitnetAcademy"> Zitnet Academy </a><br />
+Bayan loco<br />
+Kafanchan<br />
+Kaduna sate<br />
+Nigeria
+        </address>
+    </footer>
+</body>
+</html>

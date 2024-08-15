@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+</head>
+<style>
+  
+    body{
+      margin: 0;
+      background-color: #f5f6f7;
+    }
+    header{
+      text-align: center;
+      text-transform:uppercase ;
+      background: #010114;
+      border-bottom: 4px solid #fdb347;
+      color: #f5f6f7;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+.gallery{
+    width: 50%;
+    border: 5px solid red;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: repeat(2 1fr);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    padding: 20px 10px;
+    gap: 16px;
+}
+img{
+   padding: 5px;
+    border: 5px solid blue;
+  box-sizing: border-box;
+  margin: 0 auto;
+  }
+.gallery img{
+  max-width: 350px;
+  height: 300px;
+object-fit: cover;
+border-radius: 10px;
+
+}
+</style>
+<body>
+  <header>
+    <h1>CSS flex box photo gallery</h1>
+  </header>  
+  <div class="gallery">
+  <img src="image1.jpg">
+   <img src="cat2.jpg">
+    <img src="cat3.jpg">
+     <img src="cat4.jpg">
+    <img src="cat5.jpg" alt="cat image">
+    <img src="cat6.jpg">
+    <img src="cat7.jpg">
+    <img src="cat8.jpg">
+  </div>
+</body>
+</html>
